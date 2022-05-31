@@ -21,6 +21,8 @@
 <c:set var="notRegistered"><spring:message code="site.not.registered.yet"/></c:set>
 <c:set var="loginTitle"><spring:message code="site.login"/></c:set>
 
+<c:set var="noUserFound"><spring:message code="signIn.no.user.found"/></c:set>
+
 <t:layout title="${loginTitle}">
 
     <div class="form-container">
@@ -42,6 +44,11 @@
                 <input class="form-check-input" type="checkbox" name="remember-me" id="remember-me">
                 <label class="form-check-label" for="remember-me">${rememberMe}</label>
             </div>
+            <c:if test="${error}">
+                <div class="feedback">
+                    <p class="text-danger text-center" id="helpMessage">${noUserFound}</p>
+                </div>
+            </c:if>
             <div class="redirect-registration">
                 <p>
                         ${notRegistered} <a class="page-redirect" href="<spring:url value="/registration"/>">${signUp}</a>

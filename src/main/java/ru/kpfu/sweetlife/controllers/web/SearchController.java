@@ -39,7 +39,7 @@ public class SearchController {
     ) {
         map.put("enteredQuery", nickname);
         map.put("accounts", userService.findAllUsersByNickname(nickname.trim()));
-        return "search/users";
+        return getUsersSearchPage(map);
     }
 
     @PostMapping("/recipes")
@@ -49,7 +49,7 @@ public class SearchController {
     ) {
         map.put("enteredQuery", recipeName);
         map.put("recipeList", recipeService.findAllRecipesByQuery(recipeName.trim()));
-        return "search/recipes";
+        return getRecipesSearchPage(map);
     }
 
     private String loadUserSearchContent(ModelMap map) {

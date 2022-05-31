@@ -38,7 +38,7 @@ public class RegistrationController {
             ModelMap map
     ) {
         if (result.hasErrors()) {
-            map.addAttribute("error", result.getAllErrors());
+//            map.addAttribute("error", result.getAllErrors());
             map.addAttribute("form", registrationForm);
             return "forms/registration";
         }
