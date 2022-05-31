@@ -23,7 +23,7 @@ public class ExceptionHandlingController {
     public String handleException(Exception e, HttpServletResponse response) {
         response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         log.error(getExceptionMessage(e));
-        return "error/serverException";
+        return "error/serverErrorPage";
     }
 
     private String getExceptionMessage(Exception e) {

@@ -22,7 +22,6 @@ spring.mvc.view.suffix=.jsp
 server.servlet.context-path=/sweetlife
 
 server.error.whitelabel.enabled=false
-server.error.path=/error
 
 github.oauth.client-id=
 github.oauth.client-secrets=
